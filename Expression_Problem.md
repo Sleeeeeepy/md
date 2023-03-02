@@ -473,34 +473,7 @@ public PrintableAddExpression<E> : AddExpression<E>, PrintableExpression where T
     // ...
 }
 ```
-
-## Foot Note
 [^1]: 만약 Animal이 아닌 Tree가 온다고 생각해봅시다. 그렇다면 호출할 함수를 결정할 수 없습니다.
-```csharp
-public class Tree {}
-//...
-static void Main(string[] args) {
-    Animal dog = new Dog();
-    Animal cat = new Cat();
-    Animal chicken = new Chicken();
-	Tree tree = new Tree();
-	
-	Listen(dog as dynamic);
-	Listen(cat as dynamic);
-    Listen(chicken as dynamic);
-	Listen(tree as dynamic);
-}
-```
-```
-강아지 소리를 들었다.
-고양이 소리를 들었다.
-닭 소리를 들었다.
-Unhandled exception. Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'Program.Listen(Animal)' has some invalid arguments
-   at CallSite.Target(Closure , CallSite , Type , Object )
-   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
-   at Program.Main(String[] args)
-```
-이는 동적 타입 언어들이 일반적으로 가지고 있는 약점이기도 합니다.
 
 [^2]: 상용구 코드가 너무 많아집니다.
 
