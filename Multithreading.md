@@ -356,6 +356,6 @@ public class Graphics {
 ## References
 [1] https://en.wikipedia.org/wiki/ABA_problem
 
-[^1] .NET, Java등의 언어에서는 자체 해결법이 존재합니다.
+[^1]: .NET, Java등의 언어에서는 자체 해결법이 존재합니다.
 
-[^2] top이 가르키는 객체의 주소를 미리 받아왔었고, old value가 같은 값이니 통과 해버립니다.
+[^2]: top이 가르키는 객체의 주소를 미리 받아왔었고, old value가 같은 값이니 통과 해버립니다.
